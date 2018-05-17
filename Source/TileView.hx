@@ -5,13 +5,13 @@ import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 
 class TileView extends Sprite {
-    
+
     private static var hidden:BitmapData=null;
     private static var bomb:BitmapData=null;
     private static var safe:BitmapData=null;
 
     private var tile:Bitmap;
-    
+
     public function new () {
         super();
 
@@ -22,10 +22,11 @@ class TileView extends Sprite {
         }
 
         tile = new Bitmap(hidden);
+        addChild(tile);
     }
 
     public function Reset(){
-       tile.bitmapData = hidden; 
+       tile.bitmapData = hidden;
     }
 
     public function Bombed(){
