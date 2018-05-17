@@ -1,4 +1,4 @@
-package view;
+package;
 
 import openfl.display.Sprite;
 import openfl.display.Bitmap;
@@ -16,10 +16,13 @@ class TileView extends Sprite {
         super();
 
         if(hidden == null){
-            hidden = new BitmapData(64, 64, true, 0xdddd00);
-            bomb = new BitmapData(64, 64, true, 0xff0000);
-            safe = new BitmapData(64, 64, true, 0x00ff00);
+            trace("Initialised");
+            hidden = new BitmapData(64, 64, false, 0xffff00);
+            bomb = new BitmapData(64, 64, false, 0xff0000);
+            safe = new BitmapData(64, 64, false, 0x00ff00);
+            tile = new Bitmap(hidden);
         }
+        trace("Starting Up");
 
         tile = new Bitmap(hidden);
         addChild(tile);
